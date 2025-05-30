@@ -1,6 +1,13 @@
+# Specify compatible Python versions (3.11 or 3.12 recommended for tensorflow 2.13)
+python_version >= "3.11" and python_version < "3.13"
+
+# Your main packages
 streamlit==1.45.0
 numpy==1.24.4
-pillow==10.2.0
-opencv-python-headless==4.8.1.78
-tensorflow==2.13.0
-plotly==6.0.1
+
+# Build tools required for installation and distutils compatibility
+setuptools>=65.0.0
+wheel
+
+# tensorflow pinned to 2.13.0 only if Python version is compatible
+# tensorflow==2.13.0
